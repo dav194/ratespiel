@@ -4,7 +4,7 @@ import random
 
 def game():
     number = random.randint(1, 100)
-    print(f"DEBUG: Number ist {number}")
+
     wins = False
     zähler = 0
 
