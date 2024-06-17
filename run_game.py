@@ -20,15 +20,21 @@ def game():
         if number == guess:
             print(f"->{number}<- gewinnt! Versuche: {zähler}")
             wins = True
+            return zähler
         elif guess > number:
             print("Die gesuchte Zahl ist kleiner.")
         else:
             print("Die gesuchte Zahl ist größer.")
 # bis hier ist die Funktion "game()"
+def save_score(score):
+    datei = open("score.txt", "a")
+    datei.write(f"Highscore: {score}\n")
+    datei.close()
 #Spiel = True
 #while Spiel:
 while True:
-    game()
+    score = game()
+    save_score(score)
     userinput = False
     while not userinput:
         ask = input("Möchten Sie noch mal spielen? [y/n]: ")
