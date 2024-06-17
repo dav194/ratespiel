@@ -4,7 +4,6 @@ import random
 
 def game():
     number = random.randint(1, 100)
-
     wins = False
     zähler = 0
 
